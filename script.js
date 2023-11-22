@@ -73,9 +73,11 @@ function generatePassword() {
 }
 //This function will write the generated password to the page
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  passwordText.value = ""
 
+  //This will generate and set a new password
+  var password = generatePassword();
   passwordText.value = password;
 }
 
